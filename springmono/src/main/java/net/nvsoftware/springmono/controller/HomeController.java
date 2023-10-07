@@ -1,0 +1,24 @@
+package net.nvsoftware.springmono.controller;
+
+import net.nvsoftware.springmono.model.User;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HomeController {
+    @RequestMapping("/")
+    public String home() {
+        return "NVSoftware Home";
+    }
+
+    @RequestMapping("/user")
+    public User user() {
+        User user = new User();
+        user.setId("3100");
+        user.setEmail("sibozhang1998@gmail.com");
+        user.setName("sibo");
+        return user;
+    }
+}
