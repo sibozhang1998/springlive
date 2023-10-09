@@ -1,5 +1,9 @@
 package net.nvsoftware.springmono.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties({"title", "description"})
 public class Product {
     private String productId;
     private String title;
