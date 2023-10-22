@@ -16,5 +16,16 @@ public class OrderResponse {
     private Instant orderDate;
     private long totalAmount;
     private String orderStatus;
+    private ProductResponse productResponse;
 
+    @Data
+    @Builder
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class ProductResponse {
+        private Long id;
+        private String name;
+        private Long price;
+        private Long quantity;
+    }
 }
